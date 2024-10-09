@@ -106,7 +106,7 @@ export const DataTable = () => {
                     getRowId={(row) => (row._id)}
                     rows={rows}
                     columns={columns}
-                    style={{ minHeight: '650px' }}
+                    style={{ minHeight: '660px' }}
                     initialState={{
                         pagination: {
                             paginationModel: {

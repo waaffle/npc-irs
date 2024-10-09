@@ -11,9 +11,8 @@ button{
 
 .menu.open{
     width: 300px;
-    transition: width 0.3s ease;
-    
-    @include xl{
+   
+    @include xxl{
         width: 60px;
     }
 }
@@ -29,20 +28,21 @@ button{
     top: 0;
     left: 0;
     width: 100px;
-    transition: width 0.3s ease;
     .img{
         width: 100%;
         margin-bottom: 30px;
         cursor: pointer;
-        @include xl{
+        @include xxl{
             display: none;
         }
+
     }
 
-    @include xl{
+    @include xxl{
         padding: 20px; 
         width: 80px; 
     }
+
 
     .menuItem{
         display: flex;
@@ -55,7 +55,7 @@ button{
         white-space: nowrap;
         padding-left: 16px;
 
-        @include xl{
+        @include xxl{
             display: block;
             padding: 10px;
             margin-bottom: 10px;
@@ -63,7 +63,7 @@ button{
         }
 
         .text{
-            @include xl{
+            @include xxl{
                 display: none;
             }
         }
