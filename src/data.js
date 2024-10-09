@@ -189,7 +189,7 @@ export const users = [
         "isActive": false,
         "salary": 55000,
         "post": "junior QA engineer",
-        "picture": "https://images.pexels.com/photos/1036622/pexels-photo-1036622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "picture": "https://as2.ftcdn.net/v2/jpg/01/19/81/91/1000_F_119819136_duMhYal66XpgIWIT3BATZ3LkktBWupMO.jpg",
         "dateOfBirth": "14.11.1998",
         "age": 25,
         "eyeColor": "Ореховый",
