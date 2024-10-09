@@ -1,0 +1,79 @@
+@import '../../styles/variables.scss';
+@import '../../styles/responsive.scss';
+
+button{
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+.menu.open{
+    width: 300px;
+    transition: width 0.3s ease;
+    
+    @include xl{
+        width: 60px;
+    }
+}
+
+.menuButton{
+    height: 87px;
+}
+.menu{
+    background-color: $dark-bg;
+    color: $second-color;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100px;
+    transition: width 0.3s ease;
+    .img{
+        width: 100%;
+        margin-bottom: 30px;
+        cursor: pointer;
+        @include xl{
+            display: none;
+        }
+    }
+
+    @include xl{
+        padding: 20px; 
+        width: 80px; 
+    }
+
+    .menuItem{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        height: 40px;
+        white-space: nowrap;
+        padding-left: 16px;
+
+        @include xl{
+            display: block;
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 40px;
+        }
+
+        .text{
+            @include xl{
+                display: none;
+            }
+        }
+
+        &:hover{
+            background-color: $light-bg;
+        }
+        
+
+    }
+    
+}
+

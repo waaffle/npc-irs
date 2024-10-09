@@ -1,0 +1,11 @@
+@import '../../styles/variables.scss';
+
+.footer{
+    display: flex;
+    justify-content: end;
+    gap: 2px;
+    color: $grey;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}

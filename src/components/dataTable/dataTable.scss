@@ -1,0 +1,61 @@
+@import '../../styles/variables.scss';
+@import '../../styles/responsive.scss';
+
+.dataTable{
+    .dataGrid{
+        background-color: $main-bg;
+        padding: 20px;
+        width: calc(100vw - 130px);
+        @include xl{
+            width: calc(100vw - 60px);
+        }
+    }
+
+    .dataGrid.open{
+        width: calc(100vw - 290px);
+        @include xl{
+            width: calc(100vw - 60px);
+        }
+        
+    }
+
+    .MuiDataGrid-root{
+        height: 100%;
+    }
+
+    .MuiDataGrid-columnHeaders{
+        font-family: "Fira Sans";
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .MuiDataGrid-cell{
+        font-family: "Fira Sans";
+    }
+
+    .avatar{
+        display: flex;
+        gap: 10px;
+        height: 100%;
+        align-items: center;
+        padding-left: 20px;
+        font-weight: 400;
+        img{
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            object-fit: cover;
+            color: #bebebe42
+        }
+    }
+
+    .MuiDataGrid-columnHeader:focus {
+        outline-color: "#bebebe42",
+    }
+
+    .MuiDataGrid-columnHeaderTitleContainer{
+        display: block;
+    }
+
+    
+}

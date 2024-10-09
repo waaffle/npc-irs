@@ -1,0 +1,76 @@
+@import '../../styles/variables.scss';
+@import '../../styles/responsive.scss';
+
+.mainInfo{
+    padding: 10px;
+    border-left: 2px solid $second-color;
+    height: 100%;
+    overflow: hidden;
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        @include lg{
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+        @include sm{
+            flex-direction: column;
+        }
+    }
+    .avatar{
+        width: 100%;
+        flex-grow: 1;
+        max-height: 40%;
+        object-fit: cover;
+        object-position: top;
+        @include lg{
+            flex-grow: 2; 
+            max-width: 50%;
+        }
+        @include sm{
+            max-width: 90%;
+        }
+        
+    }
+    .info{
+        flex-grow: 3;
+        padding: 20px;
+        @include lg{
+            text-align: center;
+            flex-grow: 2;   
+        }
+    }
+
+    .title{
+        margin-bottom: 20px;
+        font-size: 28px;
+        font-weight: 600;
+        @include md{
+            font-size: 18px;
+        }
+    }
+
+    .detail{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 20px;
+        font-size: 16px;
+        cursor: pointer;
+        @include lg{
+            justify-content: center;
+        }
+        @include md{
+            font-size: 14px;
+        }
+    }
+    .img{
+        width: 30px;
+        height: 30px;
+    }
+
+
+}

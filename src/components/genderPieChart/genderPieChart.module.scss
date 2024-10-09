@@ -1,0 +1,19 @@
+@import '../../styles/responsive.scss';
+
+.genderPieChart{
+    @include xxxl{
+        display: flex;
+        flex-direction: column;
+        gap: 70px;
+    }
+
+    @include lg{
+        grid-row: span 1;
+        gap: 0px;
+    }
+
+    .title{
+        font-size: 26px;
+        font-weight: 600;
+    }
+}

@@ -1,0 +1,7 @@
+@import '../../styles/variables.scss';
+
+.customTooltip{
+    background-color: $main-bg;
+    border: 1px solid $second_color;
+    padding: 5px;
+}
