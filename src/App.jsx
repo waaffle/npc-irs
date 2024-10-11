@@ -5,6 +5,8 @@ import { MenuProvider } from "./context/MenuContext";
 import { Home } from "./pages/home/Home";
 import { Users } from "./pages/users/Users";
 import "./styles/global.scss";
+import { ThemeProvider } from '@mui/material/styles';
+import { theme } from "./context/Theme";
 
 
 function App() {
@@ -30,7 +32,9 @@ function App() {
   return (
     <DataProvider>
       <MenuProvider>
-        <RouterProvider router={router} />
+        <ThemeProvider theme={theme}>
+          <RouterProvider router={router} />
+        </ThemeProvider>
       </MenuProvider>
     </DataProvider>
   )

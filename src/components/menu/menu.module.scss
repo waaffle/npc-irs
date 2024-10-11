@@ -15,11 +15,12 @@ button{
     @include xxl{
         width: 60px;
     }
+    @include sm {
+        display: none;
+    }
 }
 
-.menuButton{
-    height: 87px;
-}
+
 .menu{
     background-color: $dark-bg;
     color: $second-color;
@@ -28,6 +29,7 @@ button{
     top: 0;
     left: 0;
     width: 100px;
+
     .img{
         width: 100%;
         margin-bottom: 30px;
@@ -42,7 +44,12 @@ button{
         padding: 20px; 
         width: 80px; 
     }
-
+    @include sm {
+        display: none;
+    }
+    .menuButton{
+        height: 87px;
+    }
 
     .menuItem{
         display: flex;

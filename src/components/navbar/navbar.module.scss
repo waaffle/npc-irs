@@ -9,6 +9,18 @@
     gap: 25px;
     align-items: center;
 
+    .link{
+        display: none;
+        padding: 10px;
+        border-radius: 5px;
+        &:hover{
+            background-color: #F1F1F1;
+        }
+        @include sm {
+            display: block;
+            cursor: pointer;
+        }
+    }
     .icon{
         cursor: pointer;
         @include sm {

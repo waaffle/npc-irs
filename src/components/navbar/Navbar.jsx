@@ -1,8 +1,15 @@
+import { Link } from "react-router-dom";
 import styles from "./navbar.module.scss"
 
 export const Navbar = () => {
     return (
         <div className={styles.navbar}>
+            <Link to="/" className={styles.link}>
+                <img src="/home-black.svg" alt="" />
+            </Link>
+            <Link to="/users" className={styles.link}>
+                <img src="/user-black.svg" alt="" />
+            </Link>
             <img src="/search.svg" alt="" className={styles.icon} />
             <img src="/app.svg" alt="" className={styles.icon} />
             <img src="/expand.svg" alt="" className={styles.icon} />

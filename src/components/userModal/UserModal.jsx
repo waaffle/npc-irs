@@ -10,6 +10,31 @@ import styles from "./userModal.module.scss";
 
 export const UserModal = ({ user, closeModal }) => {
     const [activeTab, setActiveTab] = useState("profile");
+
+    const [editableUser, setEditableUser] = useState({
+        gender: user?.gender || '',
+        fullName: user?.fullName || '',
+        phone: user?.phone || '',
+        telegram: user?.telegram || '',
+        email: user?.email || '',
+        age: user?.age || '',
+        dateOfBirth: user?.dateOfBirth.split('.').reverse().join('-') || '',
+        post: user?.post || '',
+        salary: user?.salary || '',
+        address: user?.address || '',
+        picture: user?.picture || '',
+    });
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setEditableUser({
+            ...editableUser,
+            [name]: value,
+        });
+    };
+    const handleSave = () => {
+        alert('Обновлённые данные о пользователе: ' + JSON.stringify(editableUser, null, 2));
+    };
+
     const modalVariants = {
         hidden: {
             opacity: 0,
@@ -49,12 +74,12 @@ export const UserModal = ({ user, closeModal }) => {
                     <Tabs categories={user?.categories} activeTab={activeTab} setActiveTab={setActiveTab} />
                     <div className={styles.info}>
                         <div className={styles.content}>
-                            {activeTab === 'profile' && <Profile user={user} />}
+                            {activeTab === 'profile' && <Profile editableUser={editableUser} handleChange={handleChange} handleSave={handleSave} />}
                             {activeTab === 'family' && <Family user={user} />}
                             {activeTab === 'education' && <Education education={user?.education} />}
                             {activeTab === 'tasks' && <Tasks tasks={user?.tasks} />}
                         </div>
-                        <div className={styles.mainInfo}><MainInfo user={user} /></div>
+                        <div className={styles.mainInfo}><MainInfo user={editableUser} /></div>
                     </div>
                 </div>
             </motion.div>
